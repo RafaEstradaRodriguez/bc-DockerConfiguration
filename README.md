@@ -1,12 +1,12 @@
-# Entorno PHP + Apache en contenedor Docker
+# Entorno PHP + Nginx + MySql en contenedores Docker
 
-Este proyecto sirve como base para levantar un contenedor con un servidor web Apache, y 
-con PHP 7.2
+Proyecto base para desarrollar proyectos Symfony.
 
-Monta el volumen en el directorio actual en el que se encuentre el docker-compose.yml.
-
-La idea es que os creeis la imagen (docker-compose ya lo hace por vosotros), y luego poder reutizar 
-esa imagen en otros proyectos, creándo
-
+Se compone de 3 contenedores:
+    * Nginx: Servidor Web
+    * MySQL: Servidor de Bases de Datos
+    * php-fpm: php versión 7.2
+    
+Ejecutad un docker-compose exec php-fpm bash para entrar en el contenedor fpm y ejecutad desde allí  la creación del proyecto    
 ## Debug
  **Todo:** Pendiente de configurarlo bien para los diferentes sistemas operativos e instalaciones de docker (toolbox, docker-for-X, etc...)
